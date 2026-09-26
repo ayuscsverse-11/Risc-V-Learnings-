@@ -61,7 +61,6 @@ Here are the most important ones you need to know as a beginner:
 * **`x5 to x7` (t0 to t2):** Temporary registers used to store quick calculations.
 * **`x10 to x11` (a0 to a1):** Used to pass inputs into your functions and return the final answers.
 
-
 ## How Code Executes (4 Pipeline Stages)
 
 Every instruction goes through 4 basic steps inside the processor:
@@ -73,6 +72,20 @@ Every instruction goes through 4 basic steps inside the processor:
 2. **Decode:** Figure out what operation needs to be done.
 3. **Execute:** Run the calculation on the ALU.
 4. **Writeback:** Save the final result back into a register.
+
+* **Example:**
+_add x3, x1, x2_
+
+If: x1 = 15
+; x2 = 27
+
+then:
+```mermaid
+graph TD
+    A[FETCH] --> B[DECODE: ADD]
+    B --> C[EXECUTE: 15 + 27]
+    C --> D[WRITEBACK: x3 = 42]
+```
 
 ---
 
