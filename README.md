@@ -25,6 +25,18 @@ RISC-V starts with a simple base system and lets you add features (extensions) a
 
 ---
 
+
+## RISC-V Registers (The Temporary Workspace)
+Registers are super-fast internal storage slots. RISC-V has **32 general-purpose registers** named `x0` to `x31`. 
+
+Here are the most important ones you need to know as a beginner:
+* **`x0` (zero):** Hardwired to always be exactly `0`. You cannot change it.
+* **`x1` (ra):** Return Address. Remembers where a function was called from so the program can jump back.
+* **`x2` (sp):** Stack Pointer. Manages temporary memory workspace allocation blocks.
+* **`x5 to x7` (t0 to t2):** Temporary registers used to store quick calculations.
+* **`x10 to x11` (a0 to a1):** Used to pass inputs into your functions and return the final answers.
+
+
 ## How Code Executes (4 Pipeline Stages)
 
 Every instruction goes through 4 basic steps inside the processor:
