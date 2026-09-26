@@ -1,4 +1,4 @@
-# Risc-V Learnings -
+# Risc-V Learnings 
 
 
 My simple study notes on RISC-V architecture, how it works, and its core concepts and simulations.
@@ -31,12 +31,24 @@ add x3, x1, x2
 * **Meaning:**
 x3 = x1 + x2
 ---
+## Why is it called RISC-V?
+RISC = Reduced Instruction Set Computer.
 
+The **"V"** in **RISC-V** stands for the Roman numeral five, representing the **fifth major RISC architecture** developed at UC Berkeley. It builds upon four earlier pioneering RISC projects:
+
+*   **RISC-I** (1981) — The original foundational research prototype.
+*   **RISC-II** (1983) — Improved design with optimized register windows.
+*   **SOAR** (1984) — *Smalltalk on a RISC*, tailored for object-oriented programming.
+*   **SPUR** (1988) — *Symbolic Processing Using RISCs*, designed for Lisp and multiprocessing.
+*   **RISC-V** (2010) — The modern, open-source Instruction Set Architecture (ISA).
+  
+---
 ## x86 vs ARM vs RISC-V:
 * **x86 (Intel/AMD):** Proprietary, complex, used in desktop PCs and servers. Companies pay heavy licensing fees.
 * **ARM (Apple, Qualcomm):** Used in almost all smartphones. It is power-efficient, but companies must pay ARM high fees to design custom chips.
 * **RISC-V (Reduced Instruction Set Computer - V):** An open-source, royalty-free architecture. Anyone can design, modify, and build chips using RISC-V without paying licensing fees or royalties to a single corporation.
 
+---
 ## Core Features & Extensions
 
 RISC-V starts with a simple base system and lets you add features (extensions) as needed:
@@ -80,6 +92,7 @@ Here are the most important ones you need to know as a beginner:
 * **`x5 to x7` (t0 to t2):** Temporary registers used to store quick calculations.
 * **`x10 to x11` (a0 to a1):** Used to pass inputs into your functions and return the final answers.
 
+---
 ## How Code Executes (4 Pipeline Stages)
 
 Every instruction goes through 4 basic steps inside the processor:
