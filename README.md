@@ -1,4 +1,4 @@
-# Risc-V Learnings - Quick Notes
+# Risc-V Learnings -
 
 
 My simple study notes on RISC-V architecture, how it works, and its core concepts.
@@ -40,6 +40,9 @@ Here are the most important ones you need to know as a beginner:
 ## How Code Executes (4 Pipeline Stages)
 
 Every instruction goes through 4 basic steps inside the processor:
+
+1. FETCH   │ ──► │  2. DECODE  │ ──► │ 3. EXECUTE  │ ──► │ 4. WRITEBACK│
+   and this process repeats.
 
 1. **Fetch:** Get the instruction from memory.
 2. **Decode:** Figure out what operation needs to be done.
