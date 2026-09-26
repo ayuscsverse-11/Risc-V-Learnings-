@@ -48,6 +48,25 @@ RISC-V starts with a simple base system and lets you add features (extensions) a
 * **C Extension:** Compressed instructions to save memory space.
 * **V Extension:** Vector processing for AI and signal processing workloads.
 
+**Example:**
+ **_RV64IMAFDC_**
+ then it means:
+
+64-bit
++
+Integer
++
+Multiply/Divide
++
+Atomic
++
+Float
++
+Double
++
+Compressed
+
+  
 ---
 
 
