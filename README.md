@@ -1,7 +1,7 @@
 # Risc-V Learnings -
 
 
-My simple study notes on RISC-V architecture, how it works, and its core concepts.
+My simple study notes on RISC-V architecture, how it works, and its core concepts and simulations.
 
 ---
 
@@ -10,7 +10,32 @@ My simple study notes on RISC-V architecture, how it works, and its core concept
 * **Alternative to Proprietary ISAs:** It acts as an open-source alternative to ARM and x86.
 * **Role of ISA:** It serves as a bridge/language between software code and hardware circuits.
 
+*The official RISC-V organization describes itself as the Open-Standard Instruction Set Architecture.*
+
+*Don't confuse these three things:*
+
+* **CPU:**
+The actual electronic hardware.
+
+* **ISA:**
+The language/rules that software uses to tell the CPU what to do.
+
+* **RISC-V:**
+One particular ISA.
+
+**(Reduced Instruction Set Computer - V)**
+_Keep the instruction set relatively simple and regular so that hardware can implement it efficiently._
+
+* **Simple instruction:**
+add x3, x1, x2
+* **Meaning:**
+x3 = x1 + x2
 ---
+
+## x86 vs ARM vs RISC-V:
+* **x86 (Intel/AMD):** Proprietary, complex, used in desktop PCs and servers. Companies pay heavy licensing fees.
+* **ARM (Apple, Qualcomm):** Used in almost all smartphones. It is power-efficient, but companies must pay ARM high fees to design custom chips.
+* **RISC-V (Reduced Instruction Set Computer - V):** An open-source, royalty-free architecture. Anyone can design, modify, and build chips using RISC-V without paying licensing fees or royalties to a single corporation.
 
 ## Core Features & Extensions
 
