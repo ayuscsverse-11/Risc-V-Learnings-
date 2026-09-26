@@ -86,6 +86,9 @@ graph TD
     B --> C[EXECUTE: 15 + 27]
     C --> D[WRITEBACK: x3 = 42]
 ```
+**Venus Simulation Verification**
+
+_I have successfully written, assembled, and executed this addition operation inside the **Venus RISC-V Simulator**._
 
 ---
 
