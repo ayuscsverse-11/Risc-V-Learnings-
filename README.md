@@ -49,6 +49,26 @@ The **"V"** in **RISC-V** stands for the Roman numeral five, representing the **
 * **RISC-V (Reduced Instruction Set Computer - V):** An open-source, royalty-free architecture. Anyone can design, modify, and build chips using RISC-V without paying licensing fees or royalties to a single corporation.
 
 ---
+##  RISC vs. CISC Architecture
+
+Modern computing features two primary hardware philosophies for processing instruction sets: **RISC** (Reduced Instruction Set Computer) and **CISC** (Complex Instruction Set Computer).
+
+### Key Architectural Differences
+
+| Feature | RISC (e.g., RISC-V, ARM) | CISC (e.g., Intel x86, AMD) |
+| :--- | :--- | :--- |
+| **Instruction Philosophy** | Emphasizes simple, highly optimized individual instructions. | Emphasizes complex instructions capable of multiple actions. |
+| **Instruction Size** | Typically **fixed-length** (e.g., 32-bit), making decoding highly efficient. | **Variable-length**, requiring complex hardware to parse boundaries. |
+| **Memory Access** | **Load-Store architecture** (computation only happens within registers). | Memory operands allowed directly inside computational instructions. |
+| **Execution Speed** | Most instructions execute in a **single clock cycle**. | Instructions take a **variable number of clock cycles** to finish. |
+| **Pipelining** | Highly efficient and easy to pipeline due to regular execution patterns. | Harder to pipeline naturally (modern chips decode complex instructions into micro-ops first). |
+| **Hardware vs. Software** | Puts more emphasis on the **software compiler** to optimize execution streams. | Puts more emphasis on **complex hardware** inside the chip architecture. |
+
+### Quick Analogy
+*   **RISC** is like building a house using only standard, identical Lego bricks. It takes more pieces (instructions) to build, but you can snap them together incredibly fast without thinking.
+*   **CISC** is like building a house using highly specialized, custom-molded pieces. You need fewer blocks overall, but it takes the builder longer to figure out how each unique piece fits.
+
+---
 ## Core Features & Extensions
 
 RISC-V starts with a simple base system and lets you add features (extensions) as needed:
