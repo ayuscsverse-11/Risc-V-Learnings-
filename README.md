@@ -149,3 +149,26 @@ _I have successfully written, assembled, and executed this addition operation in
 * **Load/Store Architecture:** You cannot do math directly inside RAM. Data must first be loaded into registers (`lw`), processed, and then saved back to memory (`sw`).
 * **The Special `x0` Register:** Register `x0` is hardwired to 0. It is useful for copying values and creating zeroed registers easily.
 * **AI Offloading:** RISC-V core works as a controller that passes heavy mathematical operations to GPUs or AI vector units.
+
+
+### Complete Register Mapping
+
+In RISC-V, there are 32 registers (`x0` to `x31`). The hardware identifies them by their `x` numbers, while software developers typically use their ABI names (nicknames) to describe their purpose.
+
+| Hardware Register | ABI Nickname | What it physically does inside PicoRV32 |
+|---|---|---|
+| `x0` | `zero` | **Hardwired Zero:** Permanently holds the value `0`. Cannot be overwritten. |
+| `x1` | `ra` | **Return Address:** Remembers the code location to return to when a function finishes. |
+| `x2` | `sp` | **Stack Pointer:** Points to the active workspace in temporary RAM memory. |
+| `x3` | `gp` | **Global Pointer:** Points to a fixed location in memory where global variables live. |
+| `x4` | `tp` | **Thread Pointer:** Used for multi-tasking and thread-local data. |
+| `x5` | `t0` | **Temporary 0:** A scratchpad register used for fast, temporary calculations. |
+| `x6` | `t1` | **Temporary 1:** Another scratchpad register for temporary data and calculations. |
+| `x7` | `t2` | **Temporary 2:** Scratchpad register for temporary calculations. |
+| `x8` | `s0 / fp` | **Saved 0 / Frame Pointer:** Stores data that must be preserved across function calls; can also be used as the frame pointer. |
+| `x9` | `s1` | **Saved 1:** Holds values that must be preserved across function calls. |
+| `x10` | `a0` | **Argument 0 / Return Value:** Passes a function argument or holds a function's return value. |
+| `x11` | `a1` | **Argument 1 / Return Value:** Passes another function argument or holds part of a return value. |
+| `x12`–`x17` | `a2`–`a7` | **Arguments 2–7:** Used to pass additional function arguments. |
+| `x18`–`x27` | `s2`–`s11` | **Saved 2–11:** Registers used for values that must be preserved across function calls. |
+| `x28`–`x31` | `t3`–`t6` | **Temporaries 3–6:** Additional scratchpad registers for temporary calculations and intermediate results. |
